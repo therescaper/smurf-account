@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accueil - Smurf Account</title>
+  <!-- Police gaming pixel -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0d0d0d;
+      color: #00ff99;
+      font-family: 'Press Start 2P', cursive, monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      user-select: none;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-shadow:
+        0 0 5px #00ff99,
+        0 0 10px #00ff99,
+        0 0 20px #00ff99,
+        0 0 40px #00ff99;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 5px #00ff99;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    a {
+      display: inline-block;
+      background: transparent;
+      border: 2px solid #00ff99;
+      padding: 1rem 2rem;
+      color: #00ff99;
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow:
+        0 0 5px #00ff99,
+        0 0 10px #00ff99;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 6px;
+      user-select: none;
+    }
+
+    a:hover, a:focus {
+      background-color: #00ff99;
+      color: #0d0d0d;
+      box-shadow:
+        0 0 20px #00ff99,
+        0 0 30px #00ff99,
+        0 0 40px #00ff99;
+    }
+
+    footer {
+      font-size: 0.6rem;
+      color: #008050;
+      text-shadow: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur mon site !</h1>
+  <p>Choisissez une page :</p>
+
+  <div class="buttons">
+    <a href="page1.html">Page 1</a>
+    <a href="page2.html">Page 2</a>
+    <a href="page3.html">Page 3</a>
+    <a href="page4.html">Page 4</a>
+  </div>
+
+  <footer>© by therescaper</footer>
+</body>
+</html>
