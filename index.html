@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>therescaper's troll List</title>
+  <title>therescaper's player list</title>
 
   <style>
     body {
@@ -52,7 +52,7 @@
 
     .top-row {
       display: grid;
-      grid-template-columns: 1fr 200px;
+      grid-template-columns: 1fr 200px 200px;
       gap: 1rem;
     }
 
@@ -101,7 +101,7 @@
 
 <body>
   <div class="container">
-    <h1>therescaper's troll List</h1>
+    <h1>therescaper's player list</h1>
 
     <div id="profiles"></div>
 
@@ -109,246 +109,153 @@
   </div>
 
   <script>
+    const emptyImages = [
+      "", "", "", "", "",
+      "", "", "", "", "",
+      "", "", "", "", "",
+      "", "", "", "", ""
+    ];
+
     const profiles = [
       {
-        username: "VIPACHAN",
-        date: "2025-07-13",
-        remaining: "infinite until she come Dm",
-        explanation: "I was boosting to €800 in duo and in my last game she refused to swap Juno despite all my pleas and finished the game 2-21 in 14 minutes, we obviously lost her, it made me lose time on my commands whereas if she had been on Kiriko or Ilari the game would have been a free win (we lost in overtime, her ultimate was canceled)",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        username: "Username 1",
+        date: "YYYY-MM-DD",
+        remaining: "0 games",
+        explanation: "Explanation here...",
+        images: [...emptyImages]
       },
       {
-        username: "GhostPants",
-        date: "2026-04-30",
-        remaining: "4 games",
-        explanation: "We were literally carrying the game as a duo with Ghostpants, and I had the rammattra Player <Kama> as my tank, and he was truly awful. We put three minutes on attack, and he even managed to cap the three points because Kama is so bad. So I decided to stop tryharding and play some chill heroes because I didn't want to tryhard with Kama. Ghostpants then decided to insult me ​​five times, even though I apologized immediately after the game in his private messages. So, to punish him, I decided to troll him as many times as he insulted me.",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        username: "Username 2",
+        date: "YYYY-MM-DD",
+        remaining: "0 games",
+        explanation: "Explanation here...",
+        images: [...emptyImages]
       },
       {
         username: "Username 3",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 4",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 5",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 6",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 7",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 8",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 9",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 10",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 11",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 12",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 13",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 14",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 15",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 16",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 17",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 18",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 19",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       },
       {
         username: "Username 20",
         date: "YYYY-MM-DD",
         remaining: "0 games",
         explanation: "Explanation here...",
-        images: [
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", "",
-          "", "", "", "", ""
-        ]
+        images: [...emptyImages]
       }
     ];
 
@@ -380,6 +287,11 @@
           <div>
             <label>Date</label>
             <div class="text-box">${profile.date}</div>
+          </div>
+
+          <div>
+            <label>Remaining games</label>
+            <div class="text-box">${profile.remaining}</div>
           </div>
         </div>
 
