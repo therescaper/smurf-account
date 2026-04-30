@@ -1,99 +1,165 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Accueil - Smurf Account</title>
-  <!-- Police gaming pixel -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <title>Troll List</title>
+
   <style>
     body {
       margin: 0;
       min-height: 100vh;
-      background: #0d0d0d;
-      color: #00ff99;
-      font-family: 'Press Start 2P', cursive, monospace;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      background: radial-gradient(circle at top, #1e293b 0%, #0f172a 45%, #020617 100%);
+      color: #e5e7eb;
+      font-family: Arial, Helvetica, sans-serif;
       padding: 2rem;
       box-sizing: border-box;
-      user-select: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
     }
 
     h1 {
-      font-size: 2rem;
-      text-shadow:
-        0 0 5px #00ff99,
-        0 0 10px #00ff99,
-        0 0 20px #00ff99,
-        0 0 40px #00ff99;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #f8fafc;
+    }
+
+    .profile-card {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .top-row {
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 1rem;
       margin-bottom: 1rem;
     }
 
-    p {
+    input,
+    textarea {
+      width: 100%;
+      background: #020617;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      border-radius: 12px;
+      padding: 0.9rem;
       font-size: 1rem;
-      margin: 0;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 0 5px #00ff99;
+      box-sizing: border-box;
+      outline: none;
     }
 
-    .buttons {
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #cbd5e1;
+      font-weight: bold;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.8rem;
+    }
+
+    .image-box {
+      height: 120px;
+      border: 2px dashed rgba(148, 163, 184, 0.35);
+      border-radius: 14px;
+      background: rgba(2, 6, 23, 0.75);
       display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 3rem;
-    }
-
-    a {
-      display: inline-block;
-      background: transparent;
-      border: 2px solid #00ff99;
-      padding: 1rem 2rem;
-      color: #00ff99;
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      box-shadow:
-        0 0 5px #00ff99,
-        0 0 10px #00ff99;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border-radius: 6px;
-      user-select: none;
-    }
-
-    a:hover, a:focus {
-      background-color: #00ff99;
-      color: #0d0d0d;
-      box-shadow:
-        0 0 20px #00ff99,
-        0 0 30px #00ff99,
-        0 0 40px #00ff99;
+      align-items: center;
+      color: #64748b;
+      font-size: 0.85rem;
+      overflow: hidden;
     }
 
     footer {
-      font-size: 0.6rem;
-      color: #008050;
-      text-shadow: none;
-      user-select: none;
+      text-align: center;
+      margin-top: 2rem;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .top-row {
+        grid-template-columns: 1fr;
+      }
+
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
-<body>
-  <h1>Smurf List</h1>
-  <p>Name & Rank</p>
 
-  <div class="buttons">
-<a href="pages/Page1.html">Page 1</a>
-<a href="pages/Page2.html">Page 2</a>
-<a href="pages/Page3.html">Page 3</a>
-<a href="pages/Page4.html">Page 4</a>
+<body>
+  <div class="container">
+    <h1>Troll List</h1>
+
+    <div id="profiles"></div>
+
+    <footer>© by therescaper</footer>
   </div>
 
-  <footer>© by therescaper</footer>
+  <script>
+    const profilesContainer = document.getElementById("profiles");
+
+    for (let i = 1; i <= 20; i++) {
+      const card = document.createElement("div");
+      card.className = "profile-card";
+
+      let images = "";
+
+      for (let j = 1; j <= 20; j++) {
+        images += `<div class="image-box">Image ${j}</div>`;
+      }
+
+      card.innerHTML = `
+        <div class="top-row">
+          <div>
+            <label>Username ${i}</label>
+            <input type="text" placeholder="Enter username..." />
+          </div>
+
+          <div>
+            <label>Date</label>
+            <input type="date" />
+          </div>
+        </div>
+
+        <label>Explanation</label>
+        <textarea placeholder="Explain why this player is on the troll list..."></textarea>
+
+        <label>Proof / Screenshots</label>
+        <div class="image-grid">
+          ${images}
+        </div>
+      `;
+
+      profilesContainer.appendChild(card);
+    }
+  </script>
 </body>
 </html>
