@@ -8,12 +8,10 @@
   <style>
     body {
       margin: 0;
-      min-height: 100vh;
       background: radial-gradient(circle at top, #1e293b 0%, #0f172a 45%, #020617 100%);
       color: #e5e7eb;
       font-family: Arial, Helvetica, sans-serif;
       padding: 2rem;
-      box-sizing: border-box;
     }
 
     .container {
@@ -25,48 +23,15 @@
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 2rem;
-      color: #f8fafc;
     }
 
     .profile-card {
       background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.25);
       border-radius: 20px;
       padding: 1.5rem;
       margin-bottom: 2rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .top-row {
-      display: grid;
-      grid-template-columns: 1fr 180px;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      background: #020617;
-      color: #e5e7eb;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      border-radius: 12px;
-      padding: 0.9rem;
-      font-size: 1rem;
-      box-sizing: border-box;
-      outline: none;
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-      margin-bottom: 1rem;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: #38bdf8;
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
     }
 
     label {
@@ -76,30 +41,50 @@
       font-weight: bold;
     }
 
+    .text-box {
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      border-radius: 12px;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      color: #e5e7eb;
+    }
+
+    .top-row {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 1rem;
+    }
+
     .image-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 0.8rem;
+      gap: 0.7rem;
     }
 
     .image-box {
       height: 120px;
-      border: 2px dashed rgba(148, 163, 184, 0.35);
-      border-radius: 14px;
-      background: rgba(2, 6, 23, 0.75);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #64748b;
-      font-size: 0.85rem;
+      border: 2px dashed rgba(148, 163, 184, 0.3);
+      border-radius: 12px;
       overflow: hidden;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.8rem;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     footer {
       text-align: center;
       margin-top: 2rem;
       color: #64748b;
-      font-size: 0.9rem;
     }
 
     @media (max-width: 800px) {
@@ -124,42 +109,271 @@
   </div>
 
   <script>
+    const profiles = [
+      {
+        username: "Username 1",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 2",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 3",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 4",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 5",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 6",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 7",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 8",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 9",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 10",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 11",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 12",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 13",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 14",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 15",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 16",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 17",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 18",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 19",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      },
+      {
+        username: "Username 20",
+        date: "2026-04-30",
+        explanation: "Explanation here...",
+        images: [
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", "",
+          "", "", "", "", ""
+        ]
+      }
+    ];
+
     const profilesContainer = document.getElementById("profiles");
 
-    for (let i = 1; i <= 20; i++) {
+    profiles.forEach(profile => {
       const card = document.createElement("div");
       card.className = "profile-card";
 
-      let images = "";
+      const imageBoxes = profile.images.map((image, index) => {
+        if (image.trim() !== "") {
+          return `
+            <div class="image-box">
+              <img src="${image}" alt="Proof ${index + 1}">
+            </div>
+          `;
+        }
 
-      for (let j = 1; j <= 20; j++) {
-        images += `<div class="image-box">Image ${j}</div>`;
-      }
+        return `<div class="image-box">Image ${index + 1}</div>`;
+      }).join("");
 
       card.innerHTML = `
         <div class="top-row">
           <div>
-            <label>Username ${i}</label>
-            <input type="text" placeholder="Enter username..." />
+            <label>Username</label>
+            <div class="text-box">${profile.username}</div>
           </div>
 
           <div>
             <label>Date</label>
-            <input type="date" />
+            <div class="text-box">${profile.date}</div>
           </div>
         </div>
 
         <label>Explanation</label>
-        <textarea placeholder="Explain why this player is on the troll list..."></textarea>
+        <div class="text-box">${profile.explanation}</div>
 
         <label>Proof / Screenshots</label>
         <div class="image-grid">
-          ${images}
+          ${imageBoxes}
         </div>
       `;
 
       profilesContainer.appendChild(card);
-    }
+    });
   </script>
 </body>
 </html>
